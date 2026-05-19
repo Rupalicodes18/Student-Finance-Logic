@@ -26,6 +26,11 @@ A dedicated collection of high-intelligence Python tools designed to simplify **
 * **Core Logic:** Implements layered progressive conditional blocks, incorporating flat Standard Deductions, Section 87A rebates, and statutory 4% cess.
 * **Goal:** Demystifying legal taxation systems via functional programming.
 
+### 🛡️ 4. Financial Stress Tester & Risk Engine (`Finance-Stress-Tester.py`)
+* **Financial Core:** Risk Management & Survival Runway Analytics.
+* **Algorithmic Logic:** Evaluates liquidity resilience by determining the "Financial Runway" metric against aggregated fixed and variable data outflows. Computes standard risk mitigation thresholds (6-month emergency buffer targets) using boundary condition tracking.
+* **Utility:** Provides localized safety diagnostics for personal liquidity pipelines without external mathematical modules.  
+
 ---
 
 ## Environment & Execution

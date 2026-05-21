@@ -1,6 +1,6 @@
 def professional_tax_calculator():
     print("==================================================")
-    print("🏛️   FINTECH LOGIC: INDIAN INCOME TAX ENGINE (FY 2025-26) ")
+    print("FINTECH LOGIC: INDIAN INCOME TAX ENGINE (FY 2025-26) ")
     print("==================================================")
     
     gross_income = float(input("Enter Gross Annual Income (₹): "))

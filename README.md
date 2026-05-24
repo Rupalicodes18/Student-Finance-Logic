@@ -1,65 +1,75 @@
-<p align="center">
-  <img src="[https://img.shields.io/badge/%F0%9F%92%B0_STUDENT_FINANCE_LOGIC-FFB6C1?style=for-the-badge&labelColor=121212&color=121212](https://img.shields.io/badge/%F0%9F%92%B0_STUDENT_FINANCE_LOGIC-FFB6C1?style=for-the-badge&labelColor=121212&color=121212)" alt="Repo Title" height="45" />
-</p>
+# 💰 STUDENT FINANCE LOGIC
 
 <p align="center">
-  <img src="[https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)" alt="Python" />
-  <img src="[https://img.shields.io/badge/License-MIT-4285F4?style=flat-square](https://img.shields.io/badge/License-MIT-4285F4?style=flat-square)" alt="License" />
+  <img src="https://img.shields.io/badge/Language-Python_3.12-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Database-SQLite_3-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
+  <img src="https://img.shields.io/badge/License-MIT-4285F4?style=flat-square" alt="License" />
 </p>
 
 ---
 
-<img src="[https://img.shields.io/badge/](https://img.shields.io/badge/)💡_Core_Philosophy-FFB6C1?style=flat-square&logoColor=black" alt="Philosophy" />
+## <kbd>🌸</kbd> Core Philosophy
 
-> "Finance is not just about numbers: it's about the logic of time and discipline."
+> **"Finance is not just about numbers: it's about the logic of time and discipline."**
 
-A dedicated collection of high-intelligence Python tools designed to simplify Financial Intelligence and Money Management for students. This repository bridges the gap between pure mathematics and financial independence by focusing on the logic of wealth creation, compounding, and strategic planning.
-
----
-
-<img src="[https://img.shields.io/badge/](https://img.shields.io/badge/)📊_Repository_Ecosystem_(Core_Modules)-FFB6C1?style=flat-square&logoColor=black" alt="Ecosystem" />
-
-* 🚀 **SIP Wealth Predictor:** Programmatic calculation of future value on systematic market investments using compound formulas.
-* 💸 **Purchasing Power Tool:** A simulation modeling inflation vectors to analyze the real value of capital over historical timelines.
-* 📈 **Enterprise Income Tax Engine:** Advanced logical parsing of standard tax slabs and deductions under fiscal regulations.
-* 📉 **Financial Stress Tester:** An algorithm designed to simulate severe economic downturns, evaluating asset-liability survival rates.
+A dedicated collection of high-intelligence Python tools designed to simplify Financial Intelligence and Money Management for students. This repository bridges the gap between pure mathematics and financial independence by focusing on the logic of wealth creation, compounding, and strategic planning. All modules are fully optimized to run flawlessly within mobile environments like Pydroid 3 as well as native PC terminals.
 
 ---
 
-<img src="[https://img.shields.io/badge/](https://img.shields.io/badge/)🔧_Application_Architecture_&_Logic_Flow-FFB6C1?style=flat-square&logoColor=black" alt="App Architecture" />
+## <kbd>🌸</kbd> Repository Ecosystem (Core Modules)
 
-* 💸 **Tax Slab Modifier:** Logic script for dynamically updating and recalculating tax structures based on modern budget shifting. It calculates the financial distribution vectors dynamically using the following operational flow:
-  * 📥 **[Raw Student/User Income Input]**
-  * 💾 &nbsp;&nbsp;&nbsp;&nbsp;▼ *Filter Layer*
-  * 📥 **[Standard Deductions Check]**
-  * 💾 &nbsp;&nbsp;&nbsp;&nbsp;▼ *Iterate Engine*
-  * 📥 **[Section 80C Matrix Processing]**
-  * 💾 &nbsp;&nbsp;&nbsp;&nbsp;▼ *Execute Formulas*
-  * 📤 **[Output: Optimized Final Tax Computations]**
+### 💹 Investment & Wealth Projection
 
-<br>
+* **🚀 SIP Wealth Predictor (`sip_calculator.py`)**
+  * **Detailed Architecture:** Built on iterative compounding algorithms that compute the future value of Systematic Investment Plans. It parses monthly inputs, interest vectors, and time horizons to calculate total invested wealth versus geometric market returns.
+  * **Core Objective:** Designed as an educational gateway to help student communities understand the compounding velocity of money early in their life cycles.
 
-* 📉 **Finance Stress Tester:** Deep evaluation engine simulating adverse personal income variables against fixed expenses. This module helps map security zones through an analytical risk assessment layout:
-  * 📥 **[Fixed Base Income Layout]**
-  * 💾 &nbsp;&nbsp;&nbsp;&nbsp;▼ *Apply Variables*
-  * 📥 **[Simulated Income Drop Vectors (e.g., -50%)]**
-  * 💾 &nbsp;&nbsp;&nbsp;&nbsp;▼ *Stress Evaluation*
-  * 📥 **[Analyze Liability & Fixed Expense Survival]**
-  * 💾 &nbsp;&nbsp;&nbsp;&nbsp;▼ *Risk Mapping*
-  * 📤 **[Calculate Financial Runway & Survival Rates]**
+* **💸 Purchasing Power & Inflation Tool (`inflation_calculator.py`)**
+  * **Detailed Architecture:** A mathematical evaluation script that simulates historical and projected inflation variables against fixed liquid savings. It applies the time-value-of-money degradation formula to showcase capital erosion.
+  * **Core Objective:** Provides users with raw analytical insights into why proactive wealth deployment and asset management are mandatory to combat purchasing power decay.
 
----
+### 🏢 Corporate Logic & Risk Engineering
 
-<img src="[https://img.shields.io/badge/](https://img.shields.io/badge/)🛠️_Operational_Workflow-FFB6C1?style=flat-square&logoColor=black" alt="Workflow" />
+* **📈 Enterprise Income Tax Engine (`tax_slab_modifier.py`)**
+  * **Detailed Architecture:** Implements a multi-layered logical parsing framework to evaluate individual financial distributions. It dynamically factors in standard tax slabs under modern fiscal regimes, standard deductions, Section 87A rebate structures, and education/health cess.
+  * **Core Objective:** Streamlines complex tax computation frameworks into plain functional Python logic to promote financial literacy.
 
-* 📁 **Step 1:** Fork the `Rupalicodes18/Student-Finance-Logic` repository to create your personal sandbox.
-* 📱 **Step 2:** Open Pydroid 3 or any native Mobile Terminal Engine on your smartphone.
-* ⚙️ **Step 3:** Ensure the native `sqlite3` logic layer and database scripts are active.
-* 🚀 **Step 4:** Execute the native Python files (`.py`) and analyze the data visualizations.
+* **🛡️ Financial Stress Tester & Survival Engine (`Finance-Stress-Tester.py`)**
+  * **Detailed Architecture:** A rigorous analytical risk engine designed to compute the "Financial Runway" metric. By mapping aggregated liabilities against custom income drop vectors (e.g., simulated -50% shock), the script calculates survival thresholds in terms of billing months and suggests emergency buffer allocations.
+  * **Core Objective:** Provides an isolated risk mitigation playground to evaluate financial stability during unexpected market downtrends.
 
 ---
 
-<img src="[https://img.shields.io/badge/](https://img.shields.io/badge/)💬_Let's_Connect!-FFB6C1?style=flat-square&logoColor=black" alt="Connect" />
+## <kbd>🌸</kbd> Application Architecture & Data Flow
 
-> Have suggestions for a new financial simulation or logic layer? Open an issue or drop a star! ⭐ This repo is fully indexed under the main operational terminal framework.
-> 
+### 📶 Module 1: Tax Slab Parsing Pipeline
+
+```text
+  [Raw Student/User Income Input]
+                │
+                ▼
+    [Filter: Standard Deductions]
+                │
+                ▼
+  [Iterate Through Section 80C Layers]
+                │
+                ▼
+  [Execute Custom Mathematical Formulas]
+                │
+                ▼
+ [Output: Optimized Final Tax Computations]
+```
+###📶 Module 2: Liquidity Stress Simulation Model
+
+```text
+  [Fixed Base Income Layout] ───► [Simulated Income Drop Vector (-50%)]
+                                             │
+                                             ▼
+                                 [Stress Evaluate Liabilities]
+                                             │
+                                             ▼
+                             [Calculate Runway & Survival Rates]
+```
+<kbd>🌸</kbd> Let's Connect!
+Have advanced ideas regarding new computational financial models, tax matrix shifts, or custom algorithmic stress simulators? Open a formal issue thread, drop a pull request, or smash that star button! ⭐ This operational asset is indexed under the mainframe infrastructure repository.
+                             

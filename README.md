@@ -1,11 +1,4 @@
-# <kbd>💰 STUDENT FINANCE LOGIC</kbd>
-
-<p align = "center" > 
-  <img src = "https://img.shields.io/badge/Language-Python_3.12-3776AB?style=flat-square & logo=python & logoColor=white" alt = "Python" /> 
-  <img src = "https://img.shields.io/badge/Database-SQLite_3-003B57?style=flat-square & logo=sqlite & logoColor=white" alt = "SQLite" /> 
-  <img src = "https://img.shields.io/badge/License-MIT-4285F4?style=flat-square" alt = "License" /> 
-</p>
-
+# 💰 STUDENT FINANCE LOGIC.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Language-Python_3.12-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />

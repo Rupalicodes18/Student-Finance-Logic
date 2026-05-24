@@ -59,7 +59,7 @@ A dedicated collection of high-intelligence Python tools designed to simplify Fi
                 ▼
  [Output: Optimized Final Tax Computations]
 ```
-###📶 Module 2: Liquidity Stress Simulation Model
+### 📶 Module 2: Liquidity Stress Simulation Model
 
 ```text
   [Fixed Base Income Layout] ───► [Simulated Income Drop Vector (-50%)]

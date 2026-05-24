@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/%F0%9F%8C%8C_Student-Finance-Logic-98FB98?style=for-the-badge&labelColor=121212&color=Green" alt="Main Title" height="200" />
-</p>
+# 💰 STUDENT FINANCE LOGIC.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Language-Python_3.12-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />

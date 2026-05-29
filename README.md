@@ -40,7 +40,7 @@ A dedicated collection of high-intelligence Python tools designed to simplify Fi
 
 ### 🧾 Expense Leak Finder & Audit Engine
 
-* **"An algorithmic approach to personal micro-finance. Track spending, evaluate essential survival categories, and eliminate hidden structural capital leaks programmatically."**
+* **An algorithmic approach to personal micro-finance. Track spending, evaluate essential survival categories, and eliminate hidden structural capital leaks programmatically.**
 
      The **Expense Leak Finder & Audit Engine** (`Expense_Leak_Finder.py`) is an advanced mathematical budget tracking utility engineered specifically for resource-conscious users and students. Operating entirely without external analytical libraries, the script sets an optimized monthly capital baseline and flags any non-essential segment that breaks the strategic threshold limit.
 

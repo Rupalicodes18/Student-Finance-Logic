@@ -38,6 +38,36 @@ A dedicated collection of high-intelligence Python tools designed to simplify Fi
   * **Detailed Architecture:** A rigorous analytical risk engine designed to compute the "Financial Runway" metric. By mapping aggregated liabilities against custom income drop vectors (e.g., simulated -50% shock), the script calculates survival thresholds in terms of billing months and suggests emergency buffer allocations.
   * **Core Objective:** Provides an isolated risk mitigation playground to evaluate financial stability during unexpected market downtrends.
 
+* **Expense Leak Finder & Audit Engine**
+
+> *"An algorithmic approach to personal micro-finance. Track spending, evaluate essential survival categories, and eliminate hidden structural capital leaks programmatically."**
+
+The **Expense Leak Finder & Audit Engine** (`Expense_Leak_Finder.py`) is an advanced mathematical budget tracking utility engineered specifically for resource-conscious users and students. Operating entirely without external analytical libraries, the script sets an optimized monthly capital baseline and flags any non-essential segment that breaks the strategic threshold limit.
+
+## Core Architectural Features
+
+* **Relational Inflow/Outflow Engine:** Utilizes the native Python `sqlite3` driver to initialize and manage an isolated storage table (`expense_core.db`). This maintains persistent state variables for transaction dates, categories, exact amounts, and categorical weight indexes.
+* **Threshold Micro-Audit Algorithm:** Automatically maps and loops through compiled categorical datasets. If any lifestyle segment marked as *Non-Essential* exceeds exactly **15% of the total monthly target allocation vector**, the internal check engine fires a critical leak exception banner.
+* **Ultra-Lightweight Portability:** Completely optimized for compilation on restricted hardware configurations, ensuring instant processing within terminal setups and mobile-based interpreter interfaces.
+
+## Algorithmic Data Pipeline
+
+Below is the execution flow detailing how raw user inputs translate into relational database adjustments and threshold evaluations:
+
+```text
+  [Input Vector: Category, Incurred Cost, Core Priority]
+                            │
+                            ▼
+      [Sanitize & Inject Directly Into SQLite State Engine]
+                            │
+                            ▼
+    [Execute Micro-Audit: Calculate Cumulative Spending Matrix]
+                            │
+                            ▼
+    [Evaluate Logical Clause: Non-Essential Spend > 15% Target?]
+             ├───► YES ───► [Throw Core System Leak Flag]
+             └───► NO  ───► [Log Safe State: Balance Verified]
+```
 ---
 
 ## <kbd>🌸</kbd> Application Architecture & Data Flow

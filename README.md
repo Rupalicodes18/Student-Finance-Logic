@@ -42,9 +42,9 @@ A dedicated collection of high-intelligence Python tools designed to simplify Fi
 
 * **An algorithmic approach to personal micro-finance. Track spending, evaluate essential survival categories, and eliminate hidden structural capital leaks programmatically.**
 
-     The **Expense Leak Finder & Audit Engine** (`Expense_Leak_Finder.py`) is an advanced mathematical budget tracking utility engineered specifically for resource-conscious users and students. Operating entirely without external analytical libraries, the script sets an optimized monthly capital baseline and flags any non-essential segment that breaks the strategic threshold limit.
+  * **Expense Leak Finder & Audit Engine** (`Expense_Leak_Finder.py`) is an advanced mathematical budget tracking utility engineered specifically for resource-conscious users and students. Operating entirely without external analytical libraries, the script sets an optimized monthly capital baseline and flags any non-essential segment that breaks the strategic threshold limit.
 
-## Core Architectural Features
+* **Core Architectural Features**
 
 * **Relational Inflow/Outflow Engine:** Utilizes the native Python `sqlite3` driver to initialize and manage an isolated storage table (`expense_core.db`). This maintains persistent state variables for transaction dates, categories, exact amounts, and categorical weight indexes.
 * **Threshold Micro-Audit Algorithm:** Automatically maps and loops through compiled categorical datasets. If any lifestyle segment marked as *Non-Essential* exceeds exactly **15% of the total monthly target allocation vector**, the internal check engine fires a critical leak exception banner.

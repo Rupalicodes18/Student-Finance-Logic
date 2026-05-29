@@ -20,11 +20,11 @@ A dedicated collection of high-intelligence Python tools designed to simplify Fi
 
 ### 💹 Investment & Wealth Projection
 
-* **🚀 SIP Wealth Predictor (`sip_calculator.py`)**
+### 🚀 SIP Wealth Predictor (`sip_calculator.py`)
   * **Detailed Architecture:** Built on iterative compounding algorithms that compute the future value of Systematic Investment Plans. It parses monthly inputs, interest vectors, and time horizons to calculate total invested wealth versus geometric market returns.
   * **Core Objective:** Designed as an educational gateway to help student communities understand the compounding velocity of money early in their life cycles.
 
-* **💸 Purchasing Power & Inflation Tool (`inflation_calculator.py`)**
+### 💸 Purchasing Power & Inflation Tool (`inflation_calculator.py`)**
   * **Detailed Architecture:** A mathematical evaluation script that simulates historical and projected inflation variables against fixed liquid savings. It applies the time-value-of-money degradation formula to showcase capital erosion.
   * **Core Objective:** Provides users with raw analytical insights into why proactive wealth deployment and asset management are mandatory to combat purchasing power decay.
 
@@ -34,13 +34,13 @@ A dedicated collection of high-intelligence Python tools designed to simplify Fi
   * **Detailed Architecture:** Implements a multi-layered logical parsing framework to evaluate individual financial distributions. It dynamically factors in standard tax slabs under modern fiscal regimes, standard deductions, Section 87A rebate structures, and education/health cess.
   * **Core Objective:** Streamlines complex tax computation frameworks into plain functional Python logic to promote financial literacy.
 
-* **🛡️ Financial Stress Tester & Survival Engine (`Finance-Stress-Tester.py`)**
+### 🛡️ Financial Stress Tester & Survival Engine (`Finance-Stress-Tester.py`)**
   * **Detailed Architecture:** A rigorous analytical risk engine designed to compute the "Financial Runway" metric. By mapping aggregated liabilities against custom income drop vectors (e.g., simulated -50% shock), the script calculates survival thresholds in terms of billing months and suggests emergency buffer allocations.
   * **Core Objective:** Provides an isolated risk mitigation playground to evaluate financial stability during unexpected market downtrends.
 
-* **Expense Leak Finder & Audit Engine**
+### 🧾 Expense Leak Finder & Audit Engine
 
-> *"An algorithmic approach to personal micro-finance. Track spending, evaluate essential survival categories, and eliminate hidden structural capital leaks programmatically."**
+* **"An algorithmic approach to personal micro-finance. Track spending, evaluate essential survival categories, and eliminate hidden structural capital leaks programmatically."**
 
 The **Expense Leak Finder & Audit Engine** (`Expense_Leak_Finder.py`) is an advanced mathematical budget tracking utility engineered specifically for resource-conscious users and students. Operating entirely without external analytical libraries, the script sets an optimized monthly capital baseline and flags any non-essential segment that breaks the strategic threshold limit.
 

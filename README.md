@@ -33,10 +33,40 @@ A dedicated collection of high-intelligence Python tools designed to simplify Fi
 * **📈 Enterprise Income Tax Engine (`tax_slab_modifier.py`)**
   * **Detailed Architecture:** Implements a multi-layered logical parsing framework to evaluate individual financial distributions. It dynamically factors in standard tax slabs under modern fiscal regimes, standard deductions, Section 87A rebate structures, and education/health cess.
   * **Core Objective:** Streamlines complex tax computation frameworks into plain functional Python logic to promote financial literacy.
+Pipeline
+
+### 📶 Module 1: Tax Slab Parsing
+```text
+  [Raw Student/User Income Input]
+                │
+                ▼
+    [Filter: Standard Deductions]
+                │
+                ▼
+  [Iterate Through Section 80C Layers]
+                │
+                ▼
+  [Execute Custom Mathematical Formulas]
+                │
+                ▼
+ [Output: Optimized Final Tax Computations]
+```
 
 ### 🛡️ Financial Stress Tester & Survival Engine (`Finance-Stress-Tester.py`)
   * **Detailed Architecture:** A rigorous analytical risk engine designed to compute the "Financial Runway" metric. By mapping aggregated liabilities against custom income drop vectors (e.g., simulated -50% shock), the script calculates survival thresholds in terms of billing months and suggests emergency buffer allocations.
   * **Core Objective:** Provides an isolated risk mitigation playground to evaluate financial stability during unexpected market downtrends.
+
+### 📶 Module 2: Liquidity Stress Simulation Model
+
+```text
+  [Fixed Base Income Layout] ───► [Simulated Income Drop Vector (-50%)]
+                                             │
+                                             ▼
+                                 [Stress Evaluate Liabilities]
+                                             │
+                                             ▼
+                             [Calculate Runway & Survival Rates]
+```
 
 ### 🧾 Expense Leak Finder & Audit Engine
 
@@ -68,38 +98,7 @@ Below is the execution flow detailing how raw user inputs translate into relatio
              ├───► YES ───► [Throw Core System Leak Flag]
              └───► NO  ───► [Log Safe State: Balance Verified]
 ```
----
-
-## <kbd>🌸</kbd> Application Architecture & Data Flow
-
-### 📶 Module 1: Tax Slab Parsing Pipeline
-
-```text
-  [Raw Student/User Income Input]
-                │
-                ▼
-    [Filter: Standard Deductions]
-                │
-                ▼
-  [Iterate Through Section 80C Layers]
-                │
-                ▼
-  [Execute Custom Mathematical Formulas]
-                │
-                ▼
- [Output: Optimized Final Tax Computations]
-```
-### 📶 Module 2: Liquidity Stress Simulation Model
-
-```text
-  [Fixed Base Income Layout] ───► [Simulated Income Drop Vector (-50%)]
-                                             │
-                                             ▼
-                                 [Stress Evaluate Liabilities]
-                                             │
-                                             ▼
-                             [Calculate Runway & Survival Rates]
-```
+ 
 <kbd>🌸</kbd> Let's Connect!
 Have advanced ideas regarding new computational financial models, tax matrix shifts, or custom algorithmic stress simulators? Open a formal issue thread, drop a pull request, or smash that star button! ⭐ This operational asset is indexed under the mainframe infrastructure repository.
                              

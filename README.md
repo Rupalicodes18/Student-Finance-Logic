@@ -80,9 +80,7 @@ Pipeline
 * **Threshold Micro-Audit Algorithm:** Automatically maps and loops through compiled categorical datasets. If any lifestyle segment marked as *Non-Essential* exceeds exactly **15% of the total monthly target allocation vector**, the internal check engine fires a critical leak exception banner.
 * **Ultra-Lightweight Portability:** Completely optimized for compilation on restricted hardware configurations, ensuring instant processing within terminal setups and mobile-based interpreter interfaces.
 
-## Algorithmic Data Pipeline
-
-Below is the execution flow detailing how raw user inputs translate into relational database adjustments and threshold evaluations:
+* **Below is the execution flow detailing how raw user inputs translate into relational database adjustments and threshold evaluations:**
 
 ```text
   [Input Vector: Category, Incurred Cost, Core Priority]
@@ -97,6 +95,32 @@ Below is the execution flow detailing how raw user inputs translate into relatio
     [Evaluate Logical Clause: Non-Essential Spend > 15% Target?]
              ├───► YES ───► [Throw Core System Leak Flag]
              └───► NO  ───► [Log Safe State: Balance Verified]
+```
+## Enterprise Value (EV) Auditor 📊
+
+* **A pure Python valuation engine to calculate a company's true enterprise price tag without external library dependencies.**
+
+## 📈 System Architecture
+
+```text
+       [ Start: Market Inputs ]
+                   │
+     ┌─────────────┴─────────────┐
+     ▼                           ▼
+[ Market Cap ]            [ Debt & Cash ]
+     │                           │
+     └─────────────┬─────────────┘
+                   ▼
+     [ EV = M.Cap + Debt - Cash ]
+                   │
+          Evaluate Risk Matrix
+                   │
+     ┌─────────────┴─────────────┐
+     ▼                           ▼
+Is EV > 1.5 * M.Cap?        Is EV < M.Cap?
+     │                           │
+     ▼                           ▼
+🚨 RED FLAG (Heavy Debt)    💎 DEEP VALUE (Cash Rich)
 ```
  
 <kbd>🌸</kbd> Let's Connect!

@@ -100,7 +100,7 @@ Pipeline
 
 * **A pure Python valuation engine to calculate a company's true enterprise price tag without external library dependencies.**
 
-## 📈 System Architecture
+* **📈 System Architecture**
 
 ```text
        [ Start: Market Inputs ]

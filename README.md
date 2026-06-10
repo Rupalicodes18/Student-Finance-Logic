@@ -122,7 +122,41 @@ Is EV > 1.5 * M.Cap?        Is EV < M.Cap?
      ▼                           ▼
 🚨 RED FLAG (Heavy Debt)    💎 DEEP VALUE (Cash Rich)
 ```
- 
+
+# WACC Hurdle Rate Engine 📉
+  (`Wacc_Hurdle.py`)
+* **A pure Python script to calculate the **Weighted Average Cost of Capital (WACC)** and simulate project viability checks without external library dependencies.**
+
+* **📈 System Architecture**
+
+```text
+       [ Start: Capital & Rates Input ]
+                       │
+         ┌─────────────┴─────────────┐
+         ▼                           ▼
+  [ Equity Weight ]            [ Debt Weight ]
+         │                           │
+         └─────────────┬─────────────┘
+                       ▼
+      [ Apply Corporate Tax Shield ]
+                       │
+         [ Compute WACC (Hurdle Rate) ]
+                       │
+         Compare with Project Return
+                       │
+         ┌─────────────┴─────────────┐
+         ▼                           ▼
+  Is Return > WACC?           Is Return < WACC?
+         │                           │
+         ▼                           ▼
+✅ GREEN LIGHT (Value Creation)   🚨 RED LIGHT (Value Destruction)
+```
+* **Logic used:**
+* **\text{WACC} = \left(\frac{E}{V} \times R_e\right) + \left(\frac{D}{V} \times R_d \times (1 - \text{Tax})\right)**
+
+* **Tax Shield: (1 - \text{Tax}) is applied to the Cost of Debt because interest expenses are tax-deductible.
+The Hurdle: Any project with an Expected Return lower than the WACC destroys shareholder value and must be rejected.**
+
 <kbd>🌸</kbd> Let's Connect!
 Have advanced ideas regarding new computational financial models, tax matrix shifts, or custom algorithmic stress simulators? Open a formal issue thread, drop a pull request, or smash that star button! ⭐ This operational asset is indexed under the mainframe infrastructure repository.
                              

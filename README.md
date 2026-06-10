@@ -151,10 +151,6 @@ Is EV > 1.5 * M.Cap?        Is EV < M.Cap?
          ▼                           ▼
 ✅ GREEN LIGHT (Value Creation)   🚨 RED LIGHT (Value Destruction)
 ```
-* **Logic used:**
-```\text{WACC} = \left(\frac{E}{V} \times R_e\right) + \left(\frac{D}{V} \times R_d \times (1 - \text{Tax})\right)
-```
-
 * **Tax Shield: (1 - \text{Tax}) is applied to the Cost of Debt because interest expenses are tax-deductible.
 The Hurdle: Any project with an Expected Return lower than the WACC destroys shareholder value and must be rejected.**
 

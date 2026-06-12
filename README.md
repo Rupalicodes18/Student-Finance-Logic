@@ -187,7 +187,7 @@ Isolates systemic emotional leaks by categorizing discipline errors rather than 
 
 ## 🛠️ Data Structure Specification
 
-Every logged transaction strictly adheres to the following nested dictionary format inside `trading_journal.json`:
+Every logged transaction strictly adheres to the following nested dictionary format inside `Trading_journal.py`:
 
 ```json
 {

@@ -1,0 +1,219 @@
+import json
+import os
+
+# Persistent JSON storage file path for mobile/Colab environment
+DB_FILE = "trading_journal.json"
+
+def load_journal():
+    """Loads the database file. If not present, initializes an empty repository."""
+    if os.path.exists(DB_FILE):
+        with open(DB_FILE, "r") as f:
+            try:
+                return json.load(f)
+            except json.JSONDecodeError:
+                print("\n Warning: JSON file corrupted. Initializing fresh session database.")
+                return []
+    return []
+
+def save_journal(data):
+    """Saves the transactional state persistently."""
+    with open(DB_FILE, "w") as f:
+        json.dump(data, f, indent=4)
+
+def add_trade_interactive():
+    """Interactive CLI menu to take live user inputs from mobile terminal."""
+    print("\n" + "="*30)
+    print("      LOG A NEW TRANSACTION")
+    print("="*30)
+    
+    symbol = input("Enter Stock Symbol (e.g., RELIANCE, TCS): ").strip().upper()
+    trade_type = input("Enter Type (LONG / SHORT): ").strip().upper()
+    while trade_type not in ["LONG", "SHORT"]:
+        trade_type = input(" Invalid. Enter LONG or SHORT: ").strip().upper()
+        
+    try:
+        entry = float(input("Enter Entry Price: "))
+        exit_price = float(input("Enter Exit Price (or current price if closed): "))
+        qty = int(input("Enter Quantity (Shares): "))
+    except ValueError:
+        print(" Error: Price and Quantity must be numeric values. Restarting entry.")
+        return
+
+    setup = input("Enter Strategy/Setup Name (e.g., Support Bounce): ").strip()
+    
+    # Psychological parameters input section
+    print("\n--- Psychological Parameters ---")
+    pre_bias = input("Pre-trade emotional state (neutral, FOMO, revenge, overconfident): ").strip().lower()
+    
+    rule_input = input("Did you follow your setup rules exactly? (y/n): ").strip().lower()
+    rule_flg = True if rule_input == 'y' else False
+    
+    violation = None
+    if not rule_flg:
+        print("Select Violation Type: FOMO_entry, revenge_trade, early_exit, late_exit, oversized, no_setup")
+        violation = input("Enter violation tag: ").strip()
+        
+    sl_moved_input = input("Did you move/adjust your stop loss negatively? (y/n): ").strip().lower()
+    sl_moved = True if sl_moved_input == 'y' else False
+    
+    early_exit_input = input("Did you cut this winner prematurely before target? (y/n): ").strip().lower()
+    early_exit = True if early_exit_input == 'y' else False
+    
+    note = input("Add a quick post-trade note (1 line): ").strip()
+
+    # PnL processing core
+    if trade_type == "LONG":
+        pnl = (exit_price - entry) * qty
+    else:
+        pnl = (entry - exit_price) * qty
+
+    journal = load_journal()
+    trade_entry = {
+        "id": len(journal) + 1,
+        "symbol": symbol,
+        "type": trade_type,
+        "entry": entry,
+        "exit": exit_price,
+        "quantity": qty,
+        "setup": setup,
+        "pnl": round(pnl, 2),
+        "psychology": {
+            "pre_trade_bias": pre_bias,
+            "rule_followed": rule_flg,
+            "violation_type": violation,
+            "stop_moved": sl_moved,
+            "cut_winner_early": early_exit,
+            "note": note
+        }
+    }
+    
+    journal.append(trade_entry)
+    save_journal(journal)
+    print(f"\n✔️ Trade ID #{trade_entry['id']} [{symbol}] logged into database! PnL: ₹{round(pnl, 2)}")
+
+def generate_analytics_dashboard():
+    """Comprehensive Analytics Suite: Processes math metrics and behavioral traps."""
+    trades = load_journal()
+    if not trades:
+        print("\n Database Empty: Log your initial transactions to generate metrics.")
+        return
+        
+    wins = [t["pnl"] for t in trades if t["pnl"] > 0]
+    losses = [t["pnl"] for t in trades if t["pnl"] < 0]
+    
+    total_trades = len(trades)
+    win_rate = (len(wins) / total_trades) * 100
+    avg_win = sum(wins) / len(wins) if wins else 0
+    avg_loss = abs(sum(losses) / len(losses)) if losses else 0
+    
+    # Expectancy math core
+    win_prob = len(wins) / total_trades
+    loss_prob = len(losses) / total_trades
+    expectancy = (win_prob * avg_win) - (loss_prob * avg_loss)
+    
+    # Profit Factor calculation
+    gross_profit = sum(wins)
+    gross_loss = sum(abs(l) for l in losses)
+    pf = gross_profit / gross_loss if gross_loss > 0 else float('inf')
+    
+    # Max Drawdown parsing sequence
+    cumulative_pnl = []
+    running_total = 0
+    for t in trades:
+        running_total += t["pnl"]
+        cumulative_pnl.append(running_total)
+        
+    peak = cumulative_pnl[0]
+    max_dd = 0
+    for value in cumulative_pnl:
+        if value > peak:
+            peak = value
+        drawdown = peak - value
+        if drawdown > max_dd:
+            max_dd = drawdown
+            
+    # Psychology analytics block
+    violations = {}
+    stop_moved_count = 0
+    early_exits = 0
+
+    for t in trades:
+        psych = t.get("psychology", {})
+        v = psych.get("violation_type")
+        if v:
+            violations[v] = violations.get(v, 0) + 1
+        if psych.get("stop_moved"):
+            stop_moved_count += 1
+        if psych.get("cut_winner_early"):
+            early_exits += 1
+
+    # Terminal Dashboard Display
+    print("\n" + "="*45)
+    print("          QUANT-TRACK METRICS DASHBOARD")
+    print("="*45)
+    print(f"Total Closed Positions : {total_trades}")
+    print(f"System Win-Rate        : {win_rate:.1f}%")
+    print(f"Mathematical Expectancy : ₹{expectancy:.2f} per trade")
+    
+    print("\n--- SYSTEM EFFICIENCY ---")
+    if pf == float('inf'):
+        print(f"Profit Factor          : [No Losses Logged Yet]")
+    else:
+        print(f"Profit Factor          : {pf:.2f}")
+    print(f"Maximum Drawdown (DD)  : ₹{max_dd:.2f}")
+    
+    print("\n--- SYSTEM EDGE RATING ---")
+    if pf >= 2.0:
+         print("Status                 : EXCELLENT EDGE (Highly Scalable)")
+    elif pf >= 1.5:
+         print("Status                 : SOLID EDGE (Maintain Consistency)")
+    elif pf >= 1.0:
+         print("Status                 : MARGINAL EDGE (System Requires Fine-tuning)")
+    else:
+         print("Status                 : NEGATIVE EDGE (System Bleeding — Revamp Rules)")
+
+    print("\n=== COGNITIVE BIAS & EMOTIONAL AUDIT ===")
+    print(f"Protective Stop Shifted : {stop_moved_count} instances")
+    print(f"Winners Cut Prematurely : {early_exits} instances")
+    if violations:
+        print("\nRule Violation Frequency Breakdown:")
+        for k, v in sorted(violations.items(), key=lambda x: -x[1]):
+            print(f"   {k:<20} : {v} occurrences")
+    else:
+        print("\nExecution Discipline   : Perfect Rules Compliance Verified.")
+    print("="*45 + "\n")
+
+# ==========================================
+# 🔄 MAIN LOOP TERMINAL DRIVER
+# ==========================================
+
+def main_menu():
+    while True:
+        print("\n" + "•"*35)
+        print("   QUANT-TRACK ENGINE MAIN MENU")
+        print("•"*35)
+        print("1. Log New Trade Transaction")
+        print("2. Generate Risk & Metric Analytics")
+        print("3. Reset / Clear Database Session")
+        print("4. Exit Terminal Pipeline")
+        
+        choice = input("\nSelect Option [1-4]: ").strip()
+        
+        if choice == "1":
+            add_trade_interactive()
+        elif choice == "2":
+            generate_analytics_dashboard()
+        elif choice == "3":
+            confirm = input(" Are you sure you want to delete all log data? (y/n): ").strip().lower()
+            if confirm == "y":
+                if os.path.exists(DB_FILE):
+                    os.remove(DB_FILE)
+                print("🗑️ Database wiped clean.")
+        elif choice == "4":
+            print("\nShutting down Quant-Track Pipeline. Clear execution fields saved! ")
+            break
+        else:
+            print(" Invalid input response. Use selections 1 to 4.")
+
+if __name__ == "__main__":
+    main_menu()

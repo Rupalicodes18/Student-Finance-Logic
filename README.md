@@ -151,8 +151,90 @@ Is EV > 1.5 * M.Cap?        Is EV < M.Cap?
          ▼                           ▼
 ✅ GREEN LIGHT (Value Creation)   🚨 RED LIGHT (Value Destruction)
 ```
+* **🗺️ System Workflow Architecture**
+
+
 * **Tax Shield: (1 - \text{Tax}) is applied to the Cost of Debt because interest expenses are tax-deductible.
 The Hurdle: Any project with an Expected Return lower than the WACC destroys shareholder value and must be rejected.**
+
+# 🚀 Quant-Track: Local JSON Trading Engine & Analytics Framework
+
+A production-grade, lightweight manual trading journal and risk analytics engine designed specifically for mobile-first workflows in the Indian Stock Market (NSE). This system bypasses global paper-trading broker restrictions by leveraging visual charting execution synced with a local JSON transactional database.
+```┌──────────────────────┐      ┌──────────────────────┐      ┌──────────────────────┐
+│  1. ANALYSIS ZONE    │      │  2. EXECUTION ZONE   │      │   3. ANALYTICS DB    │
+│                      │      │                      │      │                      │
+│ TradingView Mobile   │ ───> │ FrontPage Mobile App │ ───> │ Google Colab/Pydroid3│
+│  - 20-Day EMA Trend  │      │  - Live NSE Assets   │      │  - trading_journal.json│
+│  - Support/Resistance│      │  - Hard SL/TP Orders │      │  - Custom Python Engine│
+└──────────────────────┘      └──────────────────────┘      └──────────────────────┘
+```
+* **⚡ Core Features & Block Specifications**
+
+* **📈 1. Automated Transactional Ledger
+Tracks positional and intraday equity trades on the National Stock Exchange (NSE). It automatically parses execution types and handles direct multi-variable mathematical indexing.**
+```[Trade Trigger] ──> [Input Variables] ──> [PnL Processor] ──> [JSON Storage]```
+* **🧠 2. Deep Psychological Audit Pack
+Isolates systemic emotional leaks by categorizing discipline errors rather than just tracking monetary performance. It categorizes specific trading violations into queryable parameters:**
+*   `FOMO_entry` : Entering late due to fear of missing out.
+*   `revenge_trade` : Over-trading immediately following a stop-loss liquidation.
+*   `early_exit` : Cutting winners prematurely before hitting the structural mathematical target.
+*   `stop_moved` : Adjusting the protective stop-loss lower, allowing losses to run deeper.
+
+* **📊 3. Institutional Risk Metrics**
+* **Mathematical Expectancy:** Determines the net dollar/rupee edge of the system per trade.
+* **Profit Factor:** Measures gross profits against gross losses. A system metric $> 1.5$ signifies a statistically validated edge.
+* **Maximum Drawdown (Max DD):** Captures the absolute largest peak-to-trough drop in equity to protect trading psychology and manage position sizing.
+
+## 🛠️ Data Structure Specification
+
+Every logged transaction strictly adheres to the following nested dictionary format inside `trading_journal.json`:
+
+```json
+{
+    "id": 1,
+    "symbol": "RELIANCE",
+    "type": "LONG",
+    "entry": 1274.0,
+    "exit": 1302.0,
+    "quantity": 10,
+    "setup": "Varsity Support Bounce + RSI Oversold",
+    "pnl": 280.0,
+    "psychology": {
+        "pre_trade_bias": "neutral",
+        "rule_followed": true,
+        "violation_type": null,
+        "stop_moved": false,
+        "cut_winner_early": false,
+        "note": "Executed perfectly with 1:2 Risk-to-Reward parameters pre-set."
+    }
+}
+```
+* **📋 The 10-Minute Post-Market Routine
+Execute this scanning matrix inside TradingView Mobile every evening post 3:30 PM IST to prep the active watchlist:**
+```
++-----------------------------------------------------------------------+
+|                       THE 10-MINUTE SCANNERS Matrix                  |
++-----------------------------------------------------------------------+
+| STEP 1: TIMEFRAME STACK (2 Mins)                                      |
+|   - Scan Daily Candles against 20-day EMA.                            |
+|   - Price > 20 EMA = Bullish Bias | Price < 20 EMA = Bearish Bias    |
++-----------------------------------------------------------------------+
+| STEP 2: STRUCTURAL MAPPING (3 Mins)                                   |
+|   - Map Key Support (Floor) & Resistance (Ceiling) levels.            |
+|   - Minimum requirement: Asset must touch structural line >= 2 times. |
++-----------------------------------------------------------------------+
+| STEP 3: CANDLE CLOSE AUDIT (2 Mins)                                   |
+|   - Check closing location relative to structural ranges.             |
+|   - Breakout/Breakdown = Active Setup Triggered.                      |
++-----------------------------------------------------------------------+
+| STEP 4: VOLUME CONSTRAINTS (2 Mins)                                   |
+|   - Confirm if current volume exceeds the 5-day volume moving avg.     |
++-----------------------------------------------------------------------+
+| STEP 5: LEDGER STAGING (1 Min)                                        |
+|   - Document parameters into the pipeline for next-day execution.    |
++-----------------------------------------------------------------------+
+```
+------
 
 <kbd>🌸</kbd> Let's Connect!
 Have advanced ideas regarding new computational financial models, tax matrix shifts, or custom algorithmic stress simulators? Open a formal issue thread, drop a pull request, or smash that star button! ⭐ This operational asset is indexed under the mainframe infrastructure repository.
